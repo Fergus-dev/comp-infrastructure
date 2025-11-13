@@ -34,8 +34,9 @@ def plot_data():
     ax1.set_ylabel('Price (USD)')
     ax1.plot(closes[tickers], lw=0.6, ls='--')
     ax1.legend(tickers)
+    return current_date_time
 
-plot_data()
+current_date_time = plot_data()
 # https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html
 # As per documentation, if format argument is not set, it is inferred from file extension (.png)
-plt.savefig(r'C:\Users\fmtie\OneDrive\Desktop\comp-infrastructure\plots\{current_date_time}.png')
+plt.savefig(f'C:/Users/fmtie/OneDrive/Desktop/comp-infrastructure/plots/{current_date_time}.png')
