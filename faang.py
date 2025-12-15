@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 def get_data():
     current_date_time = pd.Timestamp.now().strftime('%Y%m%d-%H%M%S') #reference: https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
-    file_path = f'C:/Users/fmtie/OneDrive/Desktop/comp-infrastructure/data/{current_date_time}.csv'
+    file_path = f'data/{current_date_time}.csv'
     faang_stock_data_past_5_days = yf.download('meta aapl amzn nflx goog', period="5d") # reference: https://ranaroussi.github.io/yfinance/reference/yfinance.ticker_tickers.html
     faang_stock_data_frame = pd.DataFrame(faang_stock_data_past_5_days)
     pd.MultiIndex.from_frame(faang_stock_data_frame)
@@ -39,4 +39,4 @@ def plot_data():
 current_date_time = plot_data()
 # https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html
 # As per documentation, if format argument is not set, it is inferred from file extension (.png)
-plt.savefig(f'C:/Users/fmtie/OneDrive/Desktop/comp-infrastructure/plots/{current_date_time}.png')
+plt.savefig(f'plots/{current_date_time}.png')
