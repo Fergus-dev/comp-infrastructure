@@ -13,8 +13,8 @@ In this project I use three Pyhton packages: `yfinance`, `pandas`, and `matplotl
 
 You can install the all three packages on your machine by using the pip command. The method for doing so for each package is as follows:
 
-- (`yfinance`)[http://www.geeksforgeeks.org/python/how-to-install-yfinance-with-python-pip/]
-- (`pandas`)[https://www.pythoncentral.io/how-to-install-pandas-in-python/]
+- (yfinance)[http://www.geeksforgeeks.org/python/how-to-install-yfinance-with-python-pip/]
+- (pandas)[https://www.pythoncentral.io/how-to-install-pandas-in-python/]
 - (`matplotlib`)[https://matplotlib.org/stable/install/index.html]
 
 ## Project explanation
@@ -25,7 +25,7 @@ You should begin with the `problems.ipynb` notebook. Each step within that noteb
 
 - Code cell 2: This code cell plots the data. I use matplolib packages such as `plt.figure` to plot the .csv data. I add a legend corresponding the tickers using the `ax.legend` function, and perform other operations on the plot to improve readability which are explained in the `problems.ipynb` notebook. Key references used in this section can be found (here)[https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html] for the basic plotting, and (here)[https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html] for saving the plot as a .png file. I referred directly to the `matplotlib` documentation (here)[https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.legend.html] when creating the legend and making other additions and changes to the plot.
 
-- The rest of the notebook details how I made my script executable directly from my terminal by simply typing in "faang". This relates to Windows Powershell specifically. Windows ignored the shebang line I had added into my script, so I had to find another way to make it executable from the terminal. The solution I found was to create a .bat file.
+- The rest of the notebook consits of mardown cells and details how I made my script executable directly from my terminal by simply typing in the name of my script: "faang". Please note that this relates to Windows Powershell specifically, but . Windows ignored the shebang line I had added into my script, so I had to find another way to make it executable from the terminal. The solution I found was to create a .bat file.
 
 
 
