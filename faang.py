@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 def get_data():
         # getting the current date and time to use in the file name
         current_date_time = pd.Timestamp.now().strftime('%Y%m%d-%H%M%S')
-        file_path = f'C:/Users/fmtie/OneDrive/Desktop/comp-infrastructure/data/{current_date_time}.csv'
+        file_path = f'data/{current_date_time}.csv'
         # here I specify the tickers of each company as arguments in a single string, and specify the period to be the past 5 days as another argument
         faang_stock_data_past_5_days = yf.download('meta aapl amzn nflx goog', period="5d")
         # converting data to a dataframe
@@ -38,7 +38,7 @@ def plot_data():
     ax1.plot(closes[tickers], lw=0.6, ls='--')
     ax1.legend(tickers)
     # saving the plot to a specified directory with current date and time in the filename
-    plt.savefig(f'C:/Users/fmtie/OneDrive/Desktop/comp-infrastructure/plots/{current_date_time}.png')
+    plt.savefig(f'plots/{current_date_time}.png')
 
 # calling the funtion
 plot_data()
